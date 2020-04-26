@@ -1,1 +1,1 @@
-window['__YT_URL__'] = 'https://www.youtube.com/embed/jSvSESX34OQ';
+document.getElementById("yt").src = 'https://www.youtube.com/embed/jSvSESX34OQ'
