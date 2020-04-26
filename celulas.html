@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peniel Vila Melo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <style>
+        body {
+            background-size: 100%;
+            background-image: url('img/madeira.jpg');
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            display: grid;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+
+        }
+
+        .menuzinho {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            border-top: solid 15px;
+            border-color: rgb(121, 20, 20);
+
+        }
+
+        .topo {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: 0;
+            color: rgba(255, 255, 255, 1);
+            padding: 30px 10px 10px 10px;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        #loguinho {
+            width: 95%;
+
+            float: left;
+            margin: 40px 20px 20px 20px;
+        }
+
+        #pri {
+            width: 100%;
+            height: 100%;
+            text-align: justify;
+            color: #222;
+            padding: 0x 10px 10px 10px;
+            margin: 5px 5px 5px 0;
+            background: rgba(255, 255, 255, 0.5);
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            position: initial;
+            border-right: solid 0.2vw #222;
+            box-sizing: 0;
+        }
+
+        #primaria {
+            width: 10vw;
+            height: 13vw;
+            float: right;
+            margin: 3px 0 3px 0;
+        }
+
+
+        dl>div {
+            background: 0;
+            padding: 0 0 0 0;
+        }
+
+        dt {
+            background: #222;
+            border-bottom: 1px solid #222;
+            border-top: 1px solid #222;
+            color: #fff;
+            font: bold 1.2vw/1.8vw Helvetica, Arial, sans-serif;
+            margin: 0 0 0 0;
+            padding: 2px 0 0 12px;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 60px;
+        }
+
+        dd {
+            font: bold 1vw/1.8vw Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0 0 0 12px;
+            white-space: nowrap;
+        }
+
+        dd+dd {
+            border-top: 1px solid #ccc;
+        }
+
+        .sidebar {
+            width: 100%;
+            height: 100%;
+            text-align: justify;
+            color: #222;
+            padding: 10PX 10px 10px 10px;
+            margin: 5px 0 5px 5px;
+            background: rgba(255, 255, 255, 0.5);
+            grid-column-start: 7;
+            grid-column-end: -1;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            border-top: solid 2vw #222;
+        }
+
+        #pdf {
+            float: right;
+
+        }
+
+        .rodape {
+            color: #ccc;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            background: #222;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 10;
+            grid-row-end: -1;
+            border-bottom: solid 1.5vw;
+            border-color: rgb(121, 20, 20);
+            position: initial;
+
+        }
+
+        .rodapesocial {
+            text-align: center;
+            display: block;
+            margin: 0 0 1vw 10vw;
+            width: 30%;
+        }
+
+
+        .menu {
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 62px;
+            background: #222;
+            font-family: 'Arial';
+            position: fixed;
+            margin-top: -15px;
+            z-index: 4;
+            border-top: 15px solid rgb(121, 20, 20);
+        }
+
+        .menu ul {
+            z-index: 5;
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 180px;
+            background: #222;
+            float: left;
+        }
+
+        .menu a {
+            background-color: #222;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+        }
+
+        .menu a:hover {
+            background-color: #f4f4f4;
+            color: #555;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu ul ul li {
+            margin: 0 0 0 -40px;
+            float: none;
+            border-bottom: solid 1px #ccc;
+        }
+
+        .menu ul ul li a {
+            background-color: #069;
+        }
+
+        label[for="bt_menu"] {
+            padding: 5px;
+            background-color: #222;
+            color: #fff;
+            font-family: 'Arial';
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: none;
+        }
+
+        #bt_menu {
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+            label[for="bt_menu"] {
+                display: block;
+            }
+
+            #bt_menu:checked~.menu {
+                margin-left: 0;
+            }
+
+            .menu {
+                margin-top: 5px;
+                margin-left: -100%;
+                transition: all .4s;
+            }
+
+            .menu ul li {
+                width: 100%;
+                float: none;
+            }
+
+            .menu ul ul {
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all .8s;
+            }
+
+            .menu ul li:hover ul {
+                height: auto;
+                max-height: 200px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menuzinho">
+            <input type="checkbox" id="bt_menu">
+            <label for="bt_menu">&#9776;</label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Arquivos</a>
+                        <ul>
+                            <li><a href="#" download>Roteiro de Célula</a></li>
+                            <li><a href="arquivos.html">Estudos Bíblicos</a></li>
+                            <li><a href="img/images.png" download>Folder Evangelismo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Cursos</a>
+                        <ul>
+                            <li><a href="#">Escola de Lideres</a></li>
+                            <li><a href="#">Batalha Espiritual</a></li>
+                            <li><a href="#">Casados p/ Sempre</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Assista</a>
+                        <ul>
+                            <li><a href="assista_pregacoes.html">Pregações</a></li>
+                            <li><a href="assista_aovivo.html">Culto ao vivo</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="celulas.html">Células</a>
+
+                    </li>
+
+                    <li><a href="#">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="topo">
+            <img src="img/LOGI.png" id="loguinho">
+
+
+
+
+
+        </div>
+        <div class="conteudo" id="pri">
+            <dl>
+                <div>
+                    <dt>CÉLULA ALIANÇA COM DEUS</dt>
+                    <dd><img src="img/lica.jpeg" id="primaria"></dd>
+                    <dd>LIDERES SÉRGIO E LICA</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES:</dd>
+                    <dd>RUA GENERAL SAN MARTIN, 46 CASA 2</dd>
+                    <dd>JARDIM INDEPENDÊNCIA - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS E CASAIS</dd>
+                    <dd>TEL: 3025-2544</dd>
+
+                </div>
+                <div>
+                    <dt>CÉLULA ÁGAPE</dt>
+                    <dd><img src="img/anapaula.jpeg" id="primaria"></dd>
+                    <dd>LIDER ANA PAULA</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES:</dd>
+                    <dd>AV. ANTÔNIO EMERICH, 1540 AP 32</dd>
+                    <dd>VILA MELO - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS</dd>
+                    <dd>TEL: 3025-4444</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA FILHOS DA ALIANÇA</dt>
+                    <dd><img src="img/mariadapaz.jpeg" id="primaria"></dd>
+                    <dd>LIDER MARIA DA PAZ</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES:</dd>
+                    <dd>RUA CAMINHO DA CAPELA, 03</dd>
+                    <dd>JARDIM CASTELO - SANTOS - SP</dd>
+                    <dd>PARA ADULTOS</dd>
+                    <dd>TEL: 3025-4434</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA REDENÇÃO</dt>
+                    <dd><img src="img/manuel.jpeg" id="primaria"></dd>
+                    <dd>LIDER MANUEL</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES:</dd>
+                    <dd>RUA JAIME MAHANE, 256</dd>
+                    <dd>VILA SÃO JORGE - SANTOS - SP</dd>
+                    <dd>PARA ADULTOS</dd>
+                    <dd>TEL: 3025-0302</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA VENHA VIVER EM FAMÍLIA</dt>
+                    <dd>LIDERES JESUS</dd>
+                    <dd>AV. ANTÔNIO EMERICH, 683 CASA 2</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES:</dd>
+                    <dd>VILA MELO - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS E CASAIS</dd>
+                    <dd>TEL: 3025-2544</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA SINAGOGA</dt>
+                    <dd>LIDERES: DORIVAL E ZILEIDE</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES: SILVANO E CILENE</dd>
+                    <dd>RUA JULIO PRESTES, 608</dd>
+                    <dd>VILA VALENÇA - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS E CASAIS</dd>
+                    <dd>TEL: 3025-2544</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA MONTE SIÃO</dt>
+                    <dd>LIDER: KENNY</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES:</dd>
+                    <dd>RUA GUILHERME GUINLE, 163</dd>
+                    <dd>CATIAPOÃ - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS E CASAIS</dd>
+                    <dd>TEL: 3025-2544</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA BETEL</dt>
+                    <dd>LIDER: JÔNATA</dd>
+                    <dd>LIDER EM TREINAMENTO: RICARDO</dd>
+                    <dd>ANFITRIÕES: CIDA E PAULO</dd>
+                    <dd>RUA ANTÔNIO EMERICH, 683 AP 64</dd>
+                    <dd>VILA MELO - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS E CASAIS</dd>
+                    <dd>TEL: 3025-2544</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA SEMEADORES</dt>
+                    <dd>LIDER: LUCI</dd>
+                    <dd>LIDER EM TREINAMENTO:</dd>
+                    <dd>ANFITRIÕES: EDILMA E CHICO</dd>
+                    <dd>AV. NOVE DE JULHO, 738</dd>
+                    <dd>VILA CASCATINHA - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS E CASAIS</dd>
+                    <dd>TEL: 3025-2544</dd>
+                </div>
+                <div>
+                    <dt>CÉLULA GERAÇÃO DE GADITAS</dt>
+                    <dd>LIDER: KÁTIA</dd>
+                    <dd>LIDER EM TREINAMENTO: RAFAEL E TAÍS</dd>
+                    <dd>ANFITRIÕES: KÁTIA</dd>
+                    <dd>RUA JOAQUIM DIAS, 306, 738</dd>
+                    <dd>VILA VALENÇA - SÃO VICENTE - SP</dd>
+                    <dd>PARA ADULTOS E CASAIS</dd>
+                    <dd>TEL: 3025-2544</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="sidebar">
+            <div class="arquivos" id="pdf"><iframe src="img/estrutura.pdf" style="width:20vw; height:30vw;"
+                    frameboerder="0"></iframe></div>
+        </div>
+        <div class="rodape box">
+            <h1 style="font-family: bold Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2vw;">IGREJA BATISTA PENIEL VILA MELO<br>2020</h1>
+            <a href="https://www.youtube.com/channel/UCyQ16H5YT0mD3wg5eiBdPTA"><img class="rodapesocial"
+                    src="img/youtube.png" alt=""></a>
+            <a href="https://www.facebook.com/igrejapenielvilamelo"><img class="rodapesocial" src="img/face.png"
+                    alt="imagens de redes sociais" id="rodape"></a><br><br>
+
+
+        </div>
+
+        <map name="mapa_face">
+
+            <area shape="rect" coords="16,92,73,13" href="https://www.facebook.com/IgrejaBatistaPenielVilaMelo
+" target="_blank">
+
+            <area shape="rect" coords="" href="vidadeinseto.html" target="_blank">
+
+            <area shape="rect" coords="" href="toystory2.html" target="_blank">
+
+            <area shape="rect" coords="" href="universidademonstros.html" target="_blank">
+        </map>
+    </div>
+</body>
+
+</html>

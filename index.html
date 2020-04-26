@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peniel Vila Melo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        alert("BEM VINDO SEJA ABENÇOADO!!!");
+    </script>
+
+    <style>
+        body {
+            background-size: 100%;
+            background-image: url('img/madeira.jpg');
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            display: grid;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+
+        }
+
+        .menuzinho {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            border-top: solid 15px;
+            border-color: rgb(121, 20, 20);
+
+        }
+
+        .topo {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: 0;
+            color: rgba(255, 255, 255, 1);
+            padding: 30px 10px 10px 10px;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+
+
+        }
+
+        #loguinho {
+            width: 95%;
+            float: left;
+            margin: 40px 20px 20px 20px;
+        }
+
+        .conteudo {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #222;
+            padding: 0.5vw;
+            margin: 0;
+            background: rgba(255, 255, 255, 0.3);
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            border-top: solid 2vw #222;
+            border-bottom: solid 15px rgb(121, 20, 20);
+
+        }
+
+        #myCarousel {
+            left: 6vw;
+            width: 86vw;
+            text-align: center;
+            z-index: 1;
+        }
+
+        #vivo:hover {
+            color: #069;
+            border: solid 5px rgb(48, 45, 45);
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+
+        .sidebar {
+            font: bold 1.5vw/2vw Helvetica, Arial, sans-serif;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #222;
+            padding: 5PX 5px 5px 5px;
+            margin: 5px 0 5px 0;
+            grid-column-start: 0;
+            grid-column-end: 0;
+            grid-row-start: 0;
+            grid-row-end: 0;
+            border-bottom: 0;
+            border-color: 0;
+        }
+
+        dl>div {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 0 0 0 0;
+        }
+
+        dt {
+
+            border-bottom: 0.3vw solid rgb(255, 255, 255);
+            border-top: 0.3vw solid rgb(255, 255, 255);
+            margin: 0 0 0 0;
+
+        }
+
+        dd {
+            margin: 0;
+            padding: 0 0 0 0;
+            border-bottom: 0.3vw solid rgb(255, 255, 255);
+            white-space: nowrap;
+        }
+
+        .historia {
+            color: white;
+            font-family: bold Arial, Helvetica, sans-serif;
+            font-size: 2vw;
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 8;
+            grid-row-end: 9;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0 0 0 0;
+            border-top: solid 50px #222;
+        }
+
+        .boxi {
+            text-align: center;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+            background: #222;
+            color: aliceblue;
+        }
+
+        #one {
+            display: inline-flex;
+            margin: 1vw 1vw 1vw 3vw;
+            width: 28vw;
+            height: 20vw;
+            background-image: url('img/pastorak.png');
+            background-size: 100%;
+            float: left;
+        }
+
+
+        #two {
+            display: inline-flex;
+            margin: 1vw 1vw 1vw 3vw;
+            width: 28vw;
+            height: 20vw;
+            background-image: url('img/pastorelias.png');
+            background-size: 100%;
+            float: left;
+
+
+        }
+
+        #three {
+            display: inline-flex;
+            margin: 1vw 1vw 1vw 3vw;
+            width: 28vw;
+            height: 20vw;
+            background-image: url('img/pastorjl.png');
+            background-size: 100%;
+            float: left;
+
+        }
+
+
+        #qdh {
+            font-family: bold Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 1vw 1vw 1vw 1vw;
+            color: #fff;
+            border: 0.5vw double rgb(121, 20, 20);
+            background-color: rgba(255, 255, 255, 0.4);
+            clear: left;
+
+        }
+
+        #fild {
+            margin: 0 20px 20px 20px;
+            text-align: justify;
+            color: #222;
+            border: none;
+        }
+
+
+
+        .rodape {
+            color: #ccc;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            background: #222;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 10;
+            grid-row-end: -1;
+            border-bottom: solid 1.5vw;
+            border-color: rgb(121, 20, 20);
+            position: initial;
+
+        }
+
+        .rodapesocial {
+            text-align: center;
+            display: block;
+            margin: 0 0 1vw 10vw;
+            width: 30%;
+        }
+
+        .menu {
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 62px;
+            background: #222;
+            font-family: 'Arial';
+            position: fixed;
+            margin-top: -15px;
+            z-index: 4;
+            border-top: 15px solid rgb(121, 20, 20);
+        }
+
+        .menu ul {
+            z-index: 5;
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 180px;
+            background: #222;
+            float: left;
+        }
+
+        .menu a {
+            background-color: #222;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+        }
+
+        .menu a:hover {
+            background-color: #f4f4f4;
+            color: #555;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu ul ul li {
+            margin: 0 0 0 -40px;
+            float: none;
+            border-bottom: solid 1px #ccc;
+        }
+
+        .menu ul ul li a {
+            background-color: #069;
+        }
+
+        label[for="bt_menu"] {
+            padding: 5px;
+            background-color: #222;
+            color: #fff;
+            font-family: 'Arial';
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: none;
+        }
+
+        #bt_menu {
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+            label[for="bt_menu"] {
+                display: block;
+            }
+
+            #bt_menu:checked~.menu {
+                margin-left: 0;
+            }
+
+            .menu {
+                margin-top: 5px;
+                margin-left: -100%;
+                transition: all .4s;
+            }
+
+            .menu ul li {
+                width: 100%;
+                float: none;
+            }
+
+            .menu ul ul {
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all .8s;
+            }
+
+            .menu ul li:hover ul {
+                height: auto;
+                max-height: 200px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menuzinho">
+            <input type="checkbox" id="bt_menu">
+            <label for="bt_menu">&#9776;</label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Arquivos</a>
+                        <ul>
+                            <li><a href="#" download>Roteiro de Célula</a></li>
+                            <li><a href="arquivos.html">Estudos Bíblicos</a></li>
+                            <li><a href="img/images.png" download>Folder Evangelismo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Cursos</a>
+                        <ul>
+                            <li><a href="#">Escola de Lideres</a></li>
+                            <li><a href="#">Batalha Espiritual</a></li>
+                            <li><a href="#">Casados p/ Sempre</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Assista</a>
+                        <ul>
+                            <li><a href="assista_pregacoes.html">Pregações</a></li>
+                            <li><a href="assista_aovivo.html">Culto ao vivo</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="celulas.html">Células</a>
+
+                    </li>
+
+                    <li><a href="#">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="topo">
+            <img src="img/LOGI.png" id="loguinho">
+
+
+
+
+
+        </div>
+        <div class="conteudo">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="assista_aovivo.html"><img id="vivo" src="img/cultoaovivo.jpg" alt="Igreja Peniel"
+                                width="100%"></a>
+
+                    </div>
+
+                    <div class="item">
+                        <img src="img/peni.jpg" alt="Chicago" width="100%">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/ministerioinfantil.jpg" alt="New York" width="100%">
+                    </div>
+                    <div class="item">
+                        <img src="img/cultodecasais.jpg" alt="New York" width="100%">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar">
+
+        </div>
+        <div class="historia">
+            <P id="text">Pastores da Igreja Peniel Vila Melo</P>
+            <div class="boxi" id="one">
+                <h5 style="font-size:2vw; font-family: bold Arial, Helvetica, sans-serif; text-align: center;">
+                </h5>
+            </div>
+            <div class="boxi" id="two"></div>
+            <div class="boxi" id="three"></div>
+            <div class="sinopse" id="five">
+                <fieldset id="qdh">
+
+                    <h5 style="font-size:1.6vw; font-family:bold Arial, Helvetica, sans-serif;">HISTÓRIA DA IGREJA
+                        PENIEL VILA
+                        MELO<br><br></h5>
+
+                    <h5 style="font-size:1.6vw;" id="fild">A Peniel Vila Melo nasceu de uma célula cujo os donos da casa
+                        são, o Seu Antonio e a Dona Nice, onde através de sua persistência e amor cuidando de cada vida
+                        que lhe fora confiado pelo Senhor, trouxe crescimento e prosperidade para Célula
+                        tendo que mudar para um lugar maior devido a quantidade de pessoas que a frequentava. Então
+                        Surgiu uma direção de Deus para abrir uma igreja onde mais tarde se tornaria na Peniel Vila
+                        Melo.</h5>
+            </div>
+
+            </fieldset>
+        </div>
+        <div class="rodape box">
+            <h1 style="font-family: bold Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2vw;">IGREJA BATISTA PENIEL VILA MELO<br>2020</h1>
+            <a href="https://www.youtube.com/channel/UCyQ16H5YT0mD3wg5eiBdPTA"><img class="rodapesocial"
+                    src="img/youtube.png" alt=""></a>
+            <a href="https://www.facebook.com/igrejapenielvilamelo"><img class="rodapesocial" src="img/face.png"
+                    alt="imagens de redes sociais" id="rodape"></a><br><br>
+
+
+        </div>
+    </div>
+    <map name="mapa_face">
+
+        <area shape="rect" coords="16,92,73,13" href="https://www.facebook.com/IgrejaBatistaPenielVilaMelo
+" target="_blank">
+
+        <area shape="rect" coords="" href="vidadeinseto.html" target="_blank">
+
+        <area shape="rect" coords="" href="toystory2.html" target="_blank">
+
+        <area shape="rect" coords="" href="universidademonstros.html" target="_blank">
+    </map>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peniel Vila Melo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-size: 100%;
+            background-image: url('img/madeira.jpg');
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            display: grid;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+
+        }
+
+        .menuzinho {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            border-top: solid 15px;
+            border-color: rgb(121, 20, 20);
+
+        }
+
+        .topo {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: 0;
+            color: rgba(255, 255, 255, 1);
+            padding: 30px 10px 10px 10px;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        #loguinho {
+            width: 95%;
+
+            float: left;
+            margin: 40px 20px 20px 20px;
+        }
+
+        #mae {
+            position: relative;
+            width: auto;
+            height: auto;
+            text-align: center;
+            color: #222;
+            padding: 0x 1vw 1vw 1vw;
+            margin: 5px 0 0 0;
+            background: rgba(255, 255, 255, 0.5);
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            border-top: solid 2vw #222;
+            border-left: solid 20vw #222;
+            box-sizing: border-box;
+
+        }
+
+        .bloco {
+            float: top;
+            border: 1px solid #000;
+            padding: 2.5vw 0 0 0;
+            margin: 2vw 0 0 16vw;
+            width: 48vw;
+            height: 63vw;
+            background-color: rgb(121, 20, 20);
+        }
+
+        #banner {
+            font-family: bold Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.8vw;
+            text-align: center;
+            position: fixed;
+            width: 25%;
+            bottom: 30vw;
+            top: 27vw;
+            left: 3vw;
+            padding: 0;
+
+        }
+
+        #cruz {
+            width: 50%;
+            float: left;
+            margin: 40px 20px 20px 20px;
+        }
+
+        #mySidenav a {
+            position: absolute;
+            /* Position them relative to the browser window */
+            left: -2vw;
+            /* Position them outside of the screen */
+            transition: 0.2s;
+            /* Add transition on hover */
+            padding: 0.8vw;
+            /* 15px padding */
+            width: 14vw;
+            /* Set a specific width */
+            text-decoration: none;
+            /* Remove underline */
+            font-size: 1vw;
+            /* Increase font size */
+            color: white;
+            /* White text color */
+            border-radius: 0 5px 5px 0;
+            /* Rounded corners on the top right and bottom right side */
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+            /* On mouse-over, make the elements appear as they should */
+        }
+
+        /* The about link: 20px from the top with a green background */
+        #about {
+            top: 1vw;
+            background-color: #555;
+        }
+
+        #blog {
+            top: 4.1vw;
+            background-color: #555;
+            /* Blue */
+        }
+
+        #projects {
+            top: 7.2vw;
+            background-color: #555;
+            /* Red */
+        }
+
+        #contact {
+            top: 10.3vw;
+            background-color: #555;
+            /* Light Black */
+        }
+
+        .rodape {
+            color: #ccc;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            background: #222;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 10;
+            grid-row-end: -1;
+            border-bottom: solid 1.5vw;
+            border-color: rgb(121, 20, 20);
+            position: initial;
+
+        }
+
+        .rodapesocial {
+            text-align: center;
+            display: block;
+            margin: 0 0 1vw 10vw;
+            width: 30%;
+        }
+
+        .menu {
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 62px;
+            background: #222;
+            font-family: 'Arial';
+            position: fixed;
+            margin-top: -15px;
+            z-index: 4;
+            border-top: 15px solid rgb(121, 20, 20);
+        }
+
+        .menu ul {
+            z-index: 5;
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 180px;
+            background: #222;
+            float: left;
+        }
+
+        .menu a {
+            background-color: #222;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+        }
+
+        .menu a:hover {
+            background-color: #f4f4f4;
+            color: #555;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu ul ul li {
+            margin: 0 0 0 -40px;
+            float: none;
+            border-bottom: solid 1px #ccc;
+        }
+
+        .menu ul ul li a {
+            background-color: #069;
+        }
+
+        label[for="bt_menu"] {
+            padding: 5px;
+            background-color: #222;
+            color: #fff;
+            font-family: 'Arial';
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: none;
+        }
+
+        #bt_menu {
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+            label[for="bt_menu"] {
+                display: block;
+            }
+
+            #bt_menu:checked~.menu {
+                margin-left: 0;
+            }
+
+            .menu {
+                margin-top: 5px;
+                margin-left: -100%;
+                transition: all .4s;
+            }
+
+            .menu ul li {
+                width: 100%;
+                float: none;
+            }
+
+            .menu ul ul {
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all .8s;
+            }
+
+            .menu ul li:hover ul {
+                height: auto;
+                max-height: 200px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menuzinho">
+            <input type="checkbox" id="bt_menu">
+            <label for="bt_menu">&#9776;</label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Arquivos</a>
+                        <ul>
+                            <li><a href="#" download>Roteiro de Célula</a></li>
+                            <li><a href="arquivos.html">Estudos Bíblicos</a></li>
+                            <li><a href="img/images.png" download>Folder Evangelismo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Cursos</a>
+                        <ul>
+                            <li><a href="#">Escola de Lideres</a></li>
+                            <li><a href="#">Batalha Espiritual</a></li>
+                            <li><a href="#">Casados p/ Sempre</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Assista</a>
+                        <ul>
+                            <li><a href="assista_pregacoes.html">Pregações</a></li>
+                            <li><a href="assista_aovivo.html">Culto ao vivo</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="celulas.html">Células</a>
+
+                    </li>
+
+                    <li><a href="#">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="topo">
+            <img src="img/LOGI.png" id="loguinho">
+
+        </div>
+        <div id="mae">
+            <div id="mySidenav" class="sidenav">
+                <a href="arquivos.html" id="about">ESTRATÉGIA</a>
+                <a href="arquivos_vitoria.html" id="blog">VITÓRIA</a>
+                <a href="arquivos_espiritosanto.html" id="projects">ESPÍRITO SANTO</a>
+                <a href="arquivos_darhonraadeus.html" id="contact">HONRAR A DEUS</a>
+            </div>
+            <div id="banner"><img src="img/cruzbranca.png" id="cruz"></div>
+            <h1 style="font-family: bold Georgia, 'Times New Roman', Times, serif;
+            font-size: 3vw;">ESTUDOS BÍBLICOS</h1>
+
+
+            <div class="bloco">
+                <iframe src="estudos/Estudo_vitoria.pdf" style="width:43vw; height:58vw;" frameboerder="0"></iframe>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="rodape box">
+            <h1 style="font-family: bold Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2vw;">IGREJA BATISTA PENIEL VILA MELO<br>2020</h1>
+            <a href="https://www.youtube.com/channel/UCyQ16H5YT0mD3wg5eiBdPTA"><img class="rodapesocial"
+                    src="img/youtube.png" alt=""></a>
+            <a href="https://www.facebook.com/igrejapenielvilamelo"><img class="rodapesocial" src="img/face.png"
+                    alt="imagens de redes sociais" id="rodape"></a><br><br>
+
+
+        </div>
+
+        <map name="mapa_face">
+
+            <area shape="rect" coords="16,92,73,13" href="https://www.facebook.com/IgrejaBatistaPenielVilaMelo
+" target="_blank">
+
+            <area shape="rect" coords="" href="vidadeinseto.html" target="_blank">
+
+            <area shape="rect" coords="" href="toystory2.html" target="_blank">
+
+            <area shape="rect" coords="" href="universidademonstros.html" target="_blank">
+        </map>
+    </div>
+
+</body>
+
+</html>
