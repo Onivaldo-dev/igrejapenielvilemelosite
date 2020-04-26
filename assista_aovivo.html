@@ -11,6 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <script>
+
+    </script>
 
     <style>
         body {
@@ -407,8 +410,16 @@
                 <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen id="yt"></iframe>
 
-                <script
-                    src="https://github.com/Onivaldo-dev/igrejapenielvilemelosite/blob/master/conf/youtube.js"></script>
+                <script>
+                    fetch('https://github.com/Onivaldo-dev/igrejapenielvilemelosite/blob/master/conf/youtube.json', { mode: 'no-cors' })
+                        .then(v => v.json())
+                        .then(v => {
+                            document.getElementById("yt").src = v.link;
+                        })
+
+
+
+                </script>
             </div>
 
 
